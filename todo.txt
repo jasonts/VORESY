@@ -1,0 +1,29 @@
+*: completed
+
+todo list:
+VORESY重整
+	VORESY
+converter_core拆成3個獨立的模組
+*	AudioConverter
+	AudioNoiseRemover
+	AudioSpectrogramMT
+MFCC模組
+	MFCC_Process
+產生兩個檔案的MFCC數據，測試可行性(台北樹蛙)
+	<2fileMFCC>
+雜訊偵測的multithread可行性
+	AudioNoiseRemoverMT
+檔案名稱，避免多人同時使用造成重複檔名蓋來蓋去
+檔名命名方式
+*	輸入: 		sample_<timetag>.wav
+*	轉檔輸出: 	sample_<timetag>.wav.pass1.wav
+	輸入雜訊檔:	sample_<timetag>.wav.pass2noise.wav
+	乾淨檔案:	sample_<timetag>.wav.pass2.wav
+	光譜txt:		sample_<timetag>.wav.pass3_STFT.<index>.txt
+	光譜bmp:		sample_<timetag>.wav.pass3_STFT.<index>.bmp
+	
+	RS各片段:	sample_<timetag>.wav.pass11_RS<index>.wav
+	RS ZCR CSV:	sample_<timetag>.wav.pass11_RSZCR.csv
+	
+	MFCC數據:	sample_<timetag>.wav.pass21_MFCC.csv
+	
